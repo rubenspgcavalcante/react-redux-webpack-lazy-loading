@@ -7,10 +7,10 @@ export default ({children}) => (
     <nav>
       <Link to={basePath``} >Home</Link>
       <Link to={basePath`projects`}>Projects</Link>
-      <Link to={basePath`contact`} >Contact</Link>
+      <Link to={basePath`contact/byMail`} >Contact</Link>
     </nav>
     <div className="container">
-      <div className="card">
+      <div className="card text-center">
         {children}
       </div>
     </div>

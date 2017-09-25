@@ -1,4 +1,4 @@
-import Projects from './components/Projects';
+import Projects from './containers/Projects';
 import projects from './reducers/projects.reducer';
 
 export const Component = Projects;

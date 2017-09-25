@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: rgba($darker-grey, 0.8);
+}
+
+button {
+  border: 1px solid $darker-grey;
+  color: $darker-grey;
+  height: 2rem;
+  border-radius: 2px;
+  background: none;
+  font-size: 0.8rem;
+
+  &:focus {
+    outline: none;
+    border-width: 1px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    box-shadow: 0 0 5px $light-grey inset;
+    background-color: rgba($lighter-grey, 0.5);
+    border-color: $black;
+    color: $black;
+  }
+}

@@ -1,14 +1,6 @@
-$ligther-grey: #EEE;
-$ligth-grey: #CCC;
-$dark-grey: #333;
-$darker-grey: #222;
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  color: rgba($darker-grey, 0.8);
-}
+@import "variables";
+@import "modifiers";
+@import "elements";
 
 #app {
   @import "loader";
@@ -34,7 +26,7 @@ body {
     padding: 2rem;
 
     a {
-      color: $ligther-grey;
+      color: $lighter-grey;
       margin-right: 1rem;
       text-decoration: none;
       text-transform: uppercase;
@@ -46,11 +38,14 @@ body {
     flex-grow: 1;
 
     .card {
-      text-align: center;
       margin: 1rem;
       padding: 2rem;
       box-shadow: 2px 2px 2px #BBB;
       border: 1px solid #EEE;
+    }
+
+    .m-t-sm {
+      margin-top: 1rem;
     }
   }
 
@@ -58,14 +53,14 @@ body {
     height: 1rem;
     padding: 1rem;
     background: #333;
-    color: $ligther-grey;
+    color: $lighter-grey;
 
     span {
       float: left;
     }
     a {
       float: right;
-      color: $ligth-grey;
+      color: $light-grey;
     }
   }
 }

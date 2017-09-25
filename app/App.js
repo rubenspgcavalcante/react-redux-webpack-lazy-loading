@@ -22,7 +22,7 @@ render(
       <AppTemplate>
         <Route path={basePath``} exact={true} component={() => <AsyncComponent moduleProvider={home} />} />
         <Route path={basePath`projects`} exact={true} component={() => <AsyncComponent moduleProvider={projects} />} />
-        <Route path={basePath`contact`} exact={true} component={() => <AsyncComponent moduleProvider={contact} />} />
+        <Route path={basePath`contact/:contactType?`} component={() => <AsyncComponent moduleProvider={contact} />} />
       </AppTemplate>
     </Router>
    </Provider>,
