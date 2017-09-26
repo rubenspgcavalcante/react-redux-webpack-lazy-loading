@@ -10,7 +10,7 @@ module.exports = {
     path: resolve(__dirname, 'dist/'),
     filename: "[name].bundle.js",
     chunkFilename: "[name].chunk.js",
-    publicPath: process.env.NODE_ENV === 'development' ? "/dist/" : "/react-webpack-lazy-loading/dist/"
+    publicPath: process.env.NODE_ENV === 'development' ? "/dist/" : "/react-redux-webpack-lazy-loading/dist/"
   },
   module: {
     rules: [
