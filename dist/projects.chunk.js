@@ -1,6 +1,6 @@
-webpackJsonp([0],{
+webpackJsonp([2],{
 
-/***/ 227:
+/***/ 268:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9,19 +9,51 @@ webpackJsonp([0],{
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Component = undefined;
+exports.reducer = exports.Component = undefined;
 
-var _Projects = __webpack_require__(230);
+var _Projects = __webpack_require__(275);
+
+var _Projects2 = _interopRequireDefault(_Projects);
+
+var _projects = __webpack_require__(277);
+
+var _projects2 = _interopRequireDefault(_projects);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Component = exports.Component = _Projects2.default;
+var reducer = exports.reducer = _projects2.default;
+
+/***/ }),
+
+/***/ 275:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _reactRedux = __webpack_require__(114);
+
+var _Projects = __webpack_require__(276);
 
 var _Projects2 = _interopRequireDefault(_Projects);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Component = exports.Component = _Projects2.default;
+var mapStateToProps = function mapStateToProps(_ref) {
+  var home = _ref.home;
+  return { home: home };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps)(_Projects2.default);
 
 /***/ }),
 
-/***/ 230:
+/***/ 276:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55,27 +87,64 @@ var Projects = function (_PureComponent) {
   }
 
   _createClass(Projects, [{
-    key: 'render',
+    key: "render",
     value: function render() {
+      // This will ensure that even if this state is not yet on the store, we'll not get
+      // an undefined value, causing exceptions when trying to access any property
+      var _props$home = this.props.home,
+          home = _props$home === undefined ? {} : _props$home;
+
 
       return _react2.default.createElement(
-        'div',
+        "div",
         null,
         _react2.default.createElement(
-          'h1',
+          "h1",
           null,
-          'The type of Component doesn\'t matter'
+          "You can see the state being filled"
         ),
         _react2.default.createElement(
-          'h2',
+          "h2",
           null,
-          'If ',
+          "This is because new reducers are being added, and their ",
           _react2.default.createElement(
-            'b',
+            "b",
             null,
-            'is'
+            "initial state"
           ),
-          ' a React Component, you\'re good! '
+          ", being set "
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "m-t-sm" },
+          _react2.default.createElement(
+            "p",
+            null,
+            "You can even get data from other already loaded states"
+          ),
+          home.sampleData ? _react2.default.createElement(
+            "span",
+            null,
+            "Like the data from \"home\" state: ",
+            _react2.default.createElement(
+              "b",
+              null,
+              home.sampleData
+            )
+          ) : _react2.default.createElement(
+            "span",
+            null,
+            "Go back to the \"Home\" page and click on the button and then, come back here :)"
+          ),
+          _react2.default.createElement(
+            "p",
+            null,
+            _react2.default.createElement(
+              "small",
+              null,
+              "Just make sure the informations of other states be always optionals to you feature"
+            )
+          )
         )
       );
     }
@@ -85,6 +154,26 @@ var Projects = function (_PureComponent) {
 }(_react.PureComponent);
 
 exports.default = Projects;
+
+/***/ }),
+
+/***/ 277:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = projectReducer;
+function projectReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments[1];
+
+  switch (action.type) {}
+  return state;
+}
 
 /***/ })
 
