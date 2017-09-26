@@ -17,7 +17,7 @@ export default ({children}) => (
     <hr/>
     <footer>
       <span><b>Created by Rubens Pinheiro Gonçalves Cavalcante</b></span>
-      <a href="https://github.com/rubenspgcavalcante/react-webpack-lazy-loading">Check the source here</a>
+      <a href="https://github.com/rubenspgcavalcante/react-redux-webpack-lazy-loading">Check the source here</a>
     </footer>
   </div>
 );

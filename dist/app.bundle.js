@@ -28001,7 +28001,7 @@ exports.default = function (_ref) {
       ),
       _react2.default.createElement(
         'a',
-        { href: 'https://github.com/rubenspgcavalcante/react-webpack-lazy-loading' },
+        { href: 'https://github.com/rubenspgcavalcante/react-redux-webpack-lazy-loading' },
         'Check the source here'
       )
     )
