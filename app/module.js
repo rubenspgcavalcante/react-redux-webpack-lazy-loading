@@ -3,8 +3,8 @@ import {registerReducer} from 'store';
 const modules = {};
 
 export default module = (store) => (name, moduleProvider) => {
-  if(module.hasOwnProperty(name)) {
-    return Promise.resolve(module[name]);
+  if(modules.hasOwnProperty(name)) {
+    return Promise.resolve(modules[name]);
   }
   else {
     return moduleProvider.then(mod => {
